@@ -5,9 +5,10 @@ import RenderingTechniquesView from "./components/03.RenderingTechniques/Renderi
 import PropsView from "./components/05.Props/PropsView.jsx";
 import StateView from "./components/06.State/StateView.jsx";
 import EffectsView from "./components/07.Effects/EffectsView.jsx";
+import RefsView from "./components/08.Refs/RefsView.jsx";
 
-// reactComponents, jsx, renderingTechniques, props, state, effects
-const view = "effects";
+// reactComponents, jsx, renderingTechniques, props, state, effects, refs
+const view = "refs";
 
 function App() {
   switch (view) {
@@ -23,6 +24,8 @@ function App() {
       return <StateView />;
     case "effects":
       return <EffectsView />;
+    case "refs":
+      return <RefsView />;
   }
 }
 
