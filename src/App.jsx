@@ -1,60 +1,29 @@
-import "./App.css";
-import Person from "./Person.jsx";
+import "./styles/App.css";
+import ReactComponentsView from "./components/01.ReactComponents/ReactComponentsView.jsx";
+import JsxView from "./components/02.Jsx/JsxView.jsx";
+import RenderingTechniquesView from "./components/03.RenderingTechniques/RenderingTechniquesView.jsx";
+import PropsView from "./components/05.Props/PropsView.jsx";
+import StateView from "./components/06.State/StateView.jsx";
+import EffectsView from "./components/07.Effects/EffectsView.jsx";
 
-function ListItem(props) {
-  return <li>{props.animal}</li>;
-}
-
-function List(props) {
-  // return (
-  //   <ul>
-  //     {props.animals.map(
-  //       (animal) =>
-  //         //animal.startsWith("L") ? <li key={animal}>{animal}</li> : null;
-  //         animal.startsWith("L") && <ListItem key={animal} animal={animal} />
-  //     )}
-  //   </ul>
-  // );
-  if (!props.animals) {
-    return <div>Loading...</div>;
-  }
-
-  if (props.animals.length === 0) {
-    return <div>There are no animals in the list!</div>;
-  }
-
-  return (
-    <ul>
-      {props.animals.map((animal) => (
-        <li key={animal}>{animal}</li>
-      ))}
-    </ul>
-  );
-}
-
-function Button(props) {
-  const buttonStyle = {
-    color: props.color,
-    fontSize: props.fontSize + "px",
-  };
-
-  return <button style={buttonStyle}>{props.text}</button>;
-}
+// reactComponents, jsx, renderingTechniques, props, state, effects
+const view = "effects";
 
 function App() {
-  const animals = ["Lion", "Cow", "Snake", "Lizard"];
-  //const animalList = animals.map((animal) => <li key={animal}>{animal}</li>);
-  return (
-    <div>
-      <h1>Animals:</h1>
-      {/*animalList*/}
-      <List animals={animals} />
-      <Button text="Click Me!" color="blue" fontSize={12} />
-      <Button text="Don't click Me!" color="red" fontSize={12} />
-      <Button text="Click Me!" color="blue" fontSize={20} />
-      <Person />
-    </div>
-  );
+  switch (view) {
+    case "reactComponents":
+      return <ReactComponentsView />;
+    case "jsx":
+      return <JsxView />;
+    case "renderingTechniques":
+      return <RenderingTechniquesView />;
+    case "props":
+      return <PropsView />;
+    case "state":
+      return <StateView />;
+    case "effects":
+      return <EffectsView />;
+  }
 }
 
 export default App;

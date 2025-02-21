@@ -1,4 +1,4 @@
-function TestComponent() {
+function JsxView() {
   return (
     <div>
       <h1>Test title</h1>
@@ -12,4 +12,4 @@ function TestComponent() {
   );
 }
 
-export default TestComponent;
+export default JsxView;
