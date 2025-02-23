@@ -6,9 +6,10 @@ import PropsView from "./components/05.Props/PropsView.jsx";
 import StateView from "./components/06.State/StateView.jsx";
 import EffectsView from "./components/07.Effects/EffectsView.jsx";
 import RefsView from "./components/08.Refs/RefsView.jsx";
+import MemoView from "./components/09.Memo/MemoView.jsx";
 
 // reactComponents, jsx, renderingTechniques, props, state, effects, refs
-const view = "refs";
+const view = "memo";
 
 function App() {
   switch (view) {
@@ -26,6 +27,8 @@ function App() {
       return <EffectsView />;
     case "refs":
       return <RefsView />;
+    case "memo":
+      return <MemoView />;
   }
 }
 
