@@ -7,9 +7,10 @@ import StateView from "./components/06.State/StateView.jsx";
 import EffectsView from "./components/07.Effects/EffectsView.jsx";
 import RefsView from "./components/08.Refs/RefsView.jsx";
 import MemoView from "./components/09.Memo/MemoView.jsx";
+import ReactRouterView from "./components/10.ReactRouter/ReactRouterView.jsx";
 
-// reactComponents, jsx, renderingTechniques, props, state, effects, refs
-const view = "memo";
+// reactComponents, jsx, renderingTechniques, props, state, effects, refs, reactRouter
+const view = "reactRouter";
 
 function App() {
   switch (view) {
@@ -29,6 +30,8 @@ function App() {
       return <RefsView />;
     case "memo":
       return <MemoView />;
+    case "reactRouter":
+      return <ReactRouterView />;
   }
 }
 
