@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import DefaultProfile from "./DefaultProfile";
 import Spinach from "./Spinach";
+import OliveOyl from "./OliveOyl";
 import Popeye from "./Popeye";
 
 const ProfileDynamic = () => {
@@ -16,6 +17,8 @@ const ProfileDynamic = () => {
         <Popeye />
       ) : name === "spinach" ? (
         <Spinach />
+      ) : name === "oliveOyl" ? (
+        <OliveOyl />
       ) : (
         <DefaultProfile />
       )}

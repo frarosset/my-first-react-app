@@ -4,6 +4,7 @@ import Profile from "./Profile.jsx";
 import DefaultProfile from "./DefaultProfile.jsx";
 import Spinach from "./Spinach.jsx";
 import Popeye from "./Popeye.jsx";
+import OliveOyl from "./OliveOyl.jsx";
 import ProfileDynamic from "./ProfileDynamic.jsx";
 
 const routes = [
@@ -19,7 +20,12 @@ const routes = [
       { index: true, element: <DefaultProfile /> },
       { path: "spinach", element: <Spinach /> },
       { path: "popeye", element: <Popeye /> },
+      { path: "oliveOyl", element: <OliveOyl /> },
     ],
+  },
+  {
+    path: "profileDynamic/",
+    element: <ProfileDynamic />,
   },
   {
     path: "profileDynamic/:name",
