@@ -8,9 +8,10 @@ import EffectsView from "./components/07.Effects/EffectsView.jsx";
 import RefsView from "./components/08.Refs/RefsView.jsx";
 import MemoView from "./components/09.Memo/MemoView.jsx";
 import ReactRouterView from "./components/10.ReactRouter/ReactRouterView.jsx";
+import FetchingDataView from "./components/11.FetchingData/FetchingDataView.jsx";
 
-// reactComponents, jsx, renderingTechniques, props, state, effects, refs, reactRouter
-const view = "reactRouter";
+// reactComponents, jsx, renderingTechniques, props, state, effects, refs, reactRouter, fetchingData
+const view = "fetchingData";
 
 function App() {
   switch (view) {
@@ -32,6 +33,8 @@ function App() {
       return <MemoView />;
     case "reactRouter":
       return <ReactRouterView />;
+    case "fetchingData":
+      return <FetchingDataView />;
   }
 }
 
